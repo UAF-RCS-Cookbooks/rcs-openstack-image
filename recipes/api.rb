@@ -24,10 +24,10 @@ class ::Chef::Recipe
   include ::Openstack
 end
 
-include_recipe 'openstack-common::client'
+include_recipe 'rcs-openstack-common::client'
 
 if node['openstack']['image']['syslog']['use']
-  include_recipe 'openstack-common::logging'
+  include_recipe 'rcs-openstack-common::logging'
 end
 
 platform_options = node['openstack']['image']['platform']
