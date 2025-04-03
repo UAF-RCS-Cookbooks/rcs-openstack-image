@@ -11,7 +11,7 @@ describe 'openstack-image::api' do
     include_context 'image-stubs'
 
     it do
-      expect(chef_run).to include_recipe('openstack-common::client')
+      expect(chef_run).to include_recipe('rcs-openstack-common::client')
     end
 
     it do
@@ -43,7 +43,7 @@ describe 'openstack-image::api' do
         expect(chef_run).to create_template(file.name)
           .with(
             source: 'openstack-service.conf.erb',
-            cookbook: 'openstack-common',
+            cookbook: 'rcs-openstack-common',
             user: 'glance',
             group: 'glance',
             mode: '640'
@@ -114,7 +114,7 @@ describe 'openstack-image::api' do
         expect(chef_run).to create_template(file.name)
           .with(
             source: 'openstack-service.conf.erb',
-            cookbook: 'openstack-common',
+            cookbook: 'rcs-openstack-common',
             user: 'glance',
             group: 'glance',
             mode: '640'
@@ -129,7 +129,7 @@ describe 'openstack-image::api' do
         expect(chef_run).to create_template(file.name)
           .with(
             source: 'openstack-service.conf.erb',
-            cookbook: 'openstack-common',
+            cookbook: 'rcs-openstack-common',
             user: 'glance',
             group: 'glance',
             mode: '640'

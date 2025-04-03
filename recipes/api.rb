@@ -91,7 +91,7 @@ glance_scrubber_conf = merge_config_options 'image_scrubber'
 
 template '/etc/glance/glance-api.conf' do
   source 'openstack-service.conf.erb'
-  cookbook 'openstack-common'
+  cookbook 'rcs-openstack-common'
   owner node['openstack']['image']['user']
   group node['openstack']['image']['group']
   mode '640'
@@ -103,7 +103,7 @@ end
 
 template '/etc/glance/glance-cache.conf' do
   source 'openstack-service.conf.erb'
-  cookbook 'openstack-common'
+  cookbook 'rcs-openstack-common'
   owner node['openstack']['image']['user']
   group node['openstack']['image']['group']
   mode '640'
@@ -114,7 +114,7 @@ end
 
 template '/etc/glance/glance-scrubber.conf' do
   source 'openstack-service.conf.erb'
-  cookbook 'openstack-common'
+  cookbook 'rcs-openstack-common'
   owner node['openstack']['image']['user']
   group node['openstack']['image']['group']
   mode '640'

@@ -80,13 +80,13 @@ end
 
 shared_examples 'common-logging-recipe' do
   it 'does not include logging recipe by default' do
-    expect(chef_run).not_to include_recipe('openstack-common::logging')
+    expect(chef_run).not_to include_recipe('rcs-openstack-common::logging')
   end
 
   it 'includes logging recipe if openstack/image/syslog/use attribute is true' do
     node.override['openstack']['image']['syslog']['use'] = true
 
-    expect(chef_run).to include_recipe('openstack-common::logging')
+    expect(chef_run).to include_recipe('rcs-openstack-common::logging')
   end
 end
 
